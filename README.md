@@ -1,4 +1,4 @@
-# cubeX
+# CubeX
 ## Country Listing App
 
 ### Overview
