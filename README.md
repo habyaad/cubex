@@ -47,8 +47,12 @@ The project is organized using a feature-first approach with a clean architectur
 - Limited Animations: To maintain simplicity and focus on core functionality, the use of animations was kept out.
 
 ### Previews
-<img height="400" alt="Screen Shot 2024-09-03 at 23 15 35" src="https://github.com/user-attachments/assets/37ceba84-fcf6-49c0-9f68-f84850af5932">
 
-
+<img height="400" alt="Screenshot 2025-03-01 at 15 32 08" src="https://github.com/user-attachments/assets/b702bc8c-f93d-42e7-963f-1462f229570d" />
+ &emsp;&emsp;&emsp;
+<img height="400" alt="Screenshot 2025-03-01 at 15 31 16" src="https://github.com/user-attachments/assets/f94ff44a-f89c-4177-afbb-19ca5db976fe" />
+ &emsp;&emsp;&emsp;
+<img height="400" alt="Screenshot 2025-03-01 at 15 31 31" src="https://github.com/user-attachments/assets/f768124a-c833-43ff-9ed0-d478028804a5" /> <br>
+Loading Screen  &emsp;&emsp;&emsp; &emsp;&emsp; &emsp;&emsp;   Countries screen  &emsp;&emsp;&emsp; &emsp; &emsp;&emsp;   Country details screen
 
 ### Link to download apk - <a href="https://github.com/habyaad/cubex/releases/download/v1.0.2%2B3/app-armeabi-v7a-release.apk">Download Apk</a>
