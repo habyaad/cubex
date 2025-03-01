@@ -104,8 +104,15 @@ jobs:
 
         #13 Create Release
       - name: Create Release
-        uses: ncipollo/release-action@v1
+        uses: softprops/action-gh-release@v1
         with:
-          artifacts: "build/app/outputs/flutter-apk/app-release.apk,build/app/outputs/bundle/release/app-release.aab,build/ios_build.tar.gz"
-          tag: v${{ env.VERSION }}
-          token: ${{ secrets.TOKEN }}
+          files: |
+            build/app/outputs/flutter-apk/app-release.apk
+            build/app/outputs/bundle/release/app-release.aab
+            build/ios_build.tar.gz
+          tag_name: v${{ env.VERSION }}
+          name: Release v${{ env.VERSION }}
+          body: "This is a release for version v${{ env.VERSION }}"
+          prerelease: false
+          draft: false
+          token: ${{ secrets.GITHUB_TOKEN }}
