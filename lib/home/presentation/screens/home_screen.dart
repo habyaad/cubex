@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget {
             return Center(
               child: Column(
                 children: [
-                  const Text('Unable to fetch data'),
+                  const Text(state.message),
                   ElevatedButton(
                       onPressed: () {
                         locator<CountryBloc>().add(FetchCountries());
