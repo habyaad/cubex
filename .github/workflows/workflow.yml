@@ -56,7 +56,7 @@ jobs:
       - name: Build apk
         run: flutter build apk
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: release-apk
           path: build/app/outputs/apk/release/app-release.apk
@@ -71,7 +71,7 @@ jobs:
 
       - name: Create Release
         id: create_release
-        uses: actions/create-release@v3
+        uses: ncipollo/release-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -81,7 +81,7 @@ jobs:
           prerelease: false
       - name: Upload APK
         id: upload-release-asset
-        uses: actions/upload-release-asset@v3
+        uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
