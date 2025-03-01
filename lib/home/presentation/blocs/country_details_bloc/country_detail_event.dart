@@ -7,7 +7,6 @@ abstract class CountryDetailsEvent extends Equatable {
   List<Object> get props => [];
 }
 
-
 class FetchCountryDetails extends CountryDetailsEvent {
   final String name;
 

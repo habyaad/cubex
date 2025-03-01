@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if(locator<CountryBloc>().state is! CountryLoaded){
+    if (locator<CountryBloc>().state is! CountryLoaded) {
       locator<CountryBloc>().add(FetchCountries());
     }
     return Scaffold(
@@ -22,7 +22,6 @@ class HomeScreen extends StatelessWidget {
       ),
       body: BlocBuilder<CountryBloc, CountryState>(
         builder: (context, state) {
-
           if (state is CountryLoading) {
             return const Center(
               child: SpinKitFadingCircle(
@@ -35,10 +34,11 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   const Text('Unable to fetch data'),
-                  ElevatedButton(onPressed: (){
-                    locator<CountryBloc>().add(FetchCountries());
-
-                  }, child: const Text("Reload"))
+                  ElevatedButton(
+                      onPressed: () {
+                        locator<CountryBloc>().add(FetchCountries());
+                      },
+                      child: const Text("Reload"))
                 ],
               ),
             );
@@ -54,7 +54,8 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => DetailScreen(countryName: country.name),
+                        builder: (context) =>
+                            DetailScreen(countryName: country.name),
                       ),
                     );
                   },

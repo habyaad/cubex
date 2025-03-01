@@ -11,7 +11,8 @@ class CountryBloc extends Bloc<CountryEvent, CountryState> {
     on<FetchCountries>(_onFetchCountries);
   }
 
-  void _onFetchCountries(FetchCountries event, Emitter<CountryState> emit) async {
+  void _onFetchCountries(
+      FetchCountries event, Emitter<CountryState> emit) async {
     emit(CountryLoading());
     try {
       final countries = await _repository.fetchAfricanCountries();
@@ -20,6 +21,4 @@ class CountryBloc extends Bloc<CountryEvent, CountryState> {
       emit(CountryError('Failed to load countries: $e'));
     }
   }
-
-
 }

@@ -20,10 +20,10 @@ Future<void> initializeSharedDependencies() async {
     () => HomeRepository(locator()),
   );
   locator.registerLazySingleton<CountryBloc>(
-        () => CountryBloc(locator()),
+    () => CountryBloc(locator()),
   );
   locator.registerLazySingleton<CountryDetailsBloc>(
-        () => CountryDetailsBloc(locator()),
+    () => CountryDetailsBloc(locator()),
   );
   log('Dependencies initialized successfully.');
 }

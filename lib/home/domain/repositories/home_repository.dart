@@ -3,12 +3,13 @@ import 'package:cubex/home/data/home_datasource.dart';
 import '../models/country_model.dart';
 import '../models/single_country_model.dart';
 
-abstract class IHomeRepository{
+abstract class IHomeRepository {
   Future<List<Country>> fetchAfricanCountries();
 
   Future<SingleCountry> fetchCountryDetails(String name);
 }
-class HomeRepository extends IHomeRepository{
+
+class HomeRepository extends IHomeRepository {
   HomeRepository(this._datasource);
   final IHomeDatasource _datasource;
 

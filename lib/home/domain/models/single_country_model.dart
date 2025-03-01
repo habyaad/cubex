@@ -32,9 +32,8 @@ class SingleCountry {
       timezones: json['timezones'] != null
           ? List<String>.from(json['timezones'])
           : null,
-      borders: json['borders'] != null
-          ? List<String>.from(json['borders'])
-          : null,
+      borders:
+          json['borders'] != null ? List<String>.from(json['borders']) : null,
     );
   }
 }

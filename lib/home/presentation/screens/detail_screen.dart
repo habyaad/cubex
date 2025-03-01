@@ -64,7 +64,8 @@ class DetailScreen extends StatelessWidget {
                     const SizedBox(height: 20),
                     Text('Capital: ${country.capital}'),
                     const SizedBox(height: 10),
-                    Text('Population: ${country.population.toCommaSeparated()}'),
+                    Text(
+                        'Population: ${country.population.toCommaSeparated()}'),
                     const SizedBox(height: 10),
                     Text('Region: ${country.region}'),
                     const SizedBox(height: 10),
