@@ -21,6 +21,7 @@ class HomeScreen extends StatelessWidget {
         title: const Text('African Countries'),
       ),
       body: BlocBuilder<CountryBloc, CountryState>(
+        bloc: locator<CountryBloc>(),
         builder: (context, state) {
           if (state is CountryLoading) {
             return const Center(
@@ -33,7 +34,7 @@ class HomeScreen extends StatelessWidget {
             return Center(
               child: Column(
                 children: [
-                  const Text(state.message),
+                  Text(state.message),
                   ElevatedButton(
                       onPressed: () {
                         locator<CountryBloc>().add(FetchCountries());
