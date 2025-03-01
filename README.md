@@ -45,6 +45,7 @@ The project is organized using a feature-first approach with a clean architectur
 #### Trade-offs
 - No Offline Sync: Given the remote-only datasource setup, offline synchronization was not implemented, although the architecture allows for easy extension if needed in the future.
 - Limited Animations: To maintain simplicity and focus on core functionality, the use of animations was kept out.
+- I also could not develop the best designs as I saw the email only this morning(D-Day).
 
 ### Previews
 
